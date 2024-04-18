@@ -1,0 +1,2 @@
+if (!System.env.JITPACK) include ':app'
+include ':CommonLib'
