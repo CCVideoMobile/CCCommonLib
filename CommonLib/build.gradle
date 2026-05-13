@@ -7,6 +7,14 @@ def aarFile = file('libs/commonLib-1.5.0.aar')
 group = project.findProperty('group') ?: 'com.github.CCVideoMobile'
 version = project.findProperty('version') ?: '1.3.5'
 
+tasks.register('assemble') {
+    doLast {
+        if (!aarFile.exists()) {
+            throw new GradleException("Missing AAR: ${aarFile}")
+        }
+    }
+}
+
 publishing {
     publications {
         release(MavenPublication) {
