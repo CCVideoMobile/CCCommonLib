@@ -1,9 +1,14 @@
-apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.CCVideoMobile'
-apply plugin: 'com.kezong.fat-aar'
+
+//group='com.github.CCVideoMobile'
+
+plugins {
+    id("com.android.library")
+//    id("com.github.dcendents.android-maven")
+//    id("com.kezong.fat-aar")
+}
 
 android {
+    namespace "com.bokecc.common.lib"
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
     defaultConfig {
@@ -38,5 +43,6 @@ android {
 }
 
 dependencies {
-    embed 'com.bokecc:commonLib:1.3.5'
+//    embed 'com.bokecc:commonLib:1.3.5'
+    api files('libs/commonLib-1.5.0.aar')
 }

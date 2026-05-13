@@ -2,15 +2,16 @@
 
 buildscript {
     repositories {
+        maven { url "https://jitpack.io" }
         google()
-        jcenter()
-        maven { url "http://maven.aliyun.com/nexus/content/repositories/releases"}
-        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        mavenCentral()
+        maven { url "https://maven.aliyun.com/nexus/content/repositories/releases"}
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/'}
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.4'
+        classpath 'com.android.tools.build:gradle:8.2.2'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
-        classpath 'com.github.kezong:fat-aar:1.3.6'
+//        classpath "com.github.kezong:fat-aar-android:1.3.8"
     }
 }
 
@@ -19,15 +20,18 @@ allprojects {
         google()
         jcenter()
         maven { url 'https://jitpack.io' }
-        maven { url "http://maven.aliyun.com/nexus/content/repositories/releases"}
-        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/'}
-        maven {url 'http://nexus-app.bokecc.com/repository/sdk-group/'}
+        maven { url "https://maven.aliyun.com/nexus/content/repositories/releases"}
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/'}
+        maven {
+            url 'http://nexus-app.bokecc.com/repository/sdk-group/'
+            allowInsecureProtocol = true
+        }
     }
 }
 
 ext {
-    minSdkVersion = 19
-    targetSdkVersion = 28
-    compileSdkVersion = 28
-    buildToolsVersion = "28.0.3"
+    minSdkVersion = 24
+    targetSdkVersion = 34
+    compileSdkVersion = 34
+    buildToolsVersion = "34.0.0"
 }

@@ -5,6 +5,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.bokecc.common.R;
+
 /**
  * 闪屏界面
  *
@@ -23,12 +25,12 @@ public class SplashActivity extends Activity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.nullPointer:
-
-                break;
-            default:
-                break;
-        }
+//        switch (v.getId()) {
+//            case R.id.nullPointer:
+//
+//                break;
+//            default:
+//                break;
+//        }
     }
 }

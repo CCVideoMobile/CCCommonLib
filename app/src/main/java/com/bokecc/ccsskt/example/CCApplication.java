@@ -1,9 +1,8 @@
 package com.bokecc.ccsskt.example;
 
-import android.support.multidex.MultiDexApplication;
+import androidx.multidex.MultiDexApplication;
 
 import com.bokecc.common.application.ApplicationData;
-import com.bokecc.common.crash.CCCrashManager;
 
 /**
  * Application
